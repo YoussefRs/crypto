@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./Sidebar.css";
+import "./sidebar.css";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef();
