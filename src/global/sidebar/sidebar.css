@@ -1,0 +1,94 @@
+/* Sidebar itself */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  max-width: 400px; /* Initially off-screen */
+  width: 100%; /* Fixed width for the sidebar */
+  height: 100vh;
+  background-color: #0e1a45;
+  color: #ffffff;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1001; /* Sidebar content above the overlay */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* When sidebar is open, slide it into view */
+.sidebar.open {
+  right: 0;
+}
+
+/* Sidebar content styling */
+.sidebar-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.sidebar-content svg {
+  max-width: 200px;
+}
+
+.sidebar-content p {
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.more-link {
+  color: #4a90e2;
+  cursor: pointer;
+}
+
+.sidebar-links {
+  margin-top: 20px;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 10px 0;
+  color: #ccc;
+  text-decoration: none;
+  border-bottom: 1px solid #4a90e2;
+  font-size: 16px;
+  transition: color 0.3s;
+  font-weight: 600;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active {
+  color: #ffffff;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #4a90e2;
+}
+
+/* Overlay to close sidebar when clicked */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+/* Show the overlay when the sidebar is open */
+.sidebar-overlay.open {
+  display: block;
+  z-index: 1000;
+}
